@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        height: 380px;  
+        width: 600px;      
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        width: 100%;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        background: white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header img{
+        width: 32px; 
+        height: 32px;
+        margin-left: 10px;
+    }
+    
+    .header p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #404040;
+        margin-left: 5px;
+    }
+
+    .search input{
+        width: 301px;
+        height: 32px;
+        background: #E8E8E8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border:0;
+        outline:0;
+        text-align: center;
+        color: #8C8C8C;
+        margin-top: 35px;
+    }
+
+    .search input:focus{
+        outline:none!important;
+    }
+
+    .content img{
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 25px;
+        width: 90px;
+        height: 90px;
+        border-radius: 125px;
+    }
+
+    .content .element-on-off{
+        width: 66px;
+        height: 27px;
+        bottom: 112px;
+        margin-left: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: #E8E8E8;
+        border-radius: 25px;
+    }
+
+    .content .element-on-off p{
+        width: 45px;
+        height: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6441a5;
+    }
+
+    .container .title {
+        position: absolute;
+        width: 72px;
+        height: 24px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #404040;
+        margin-left: 130px;
+        margin-top: 70px;
+    }
+    .container .title .sous-title{
+        position: absolute;
+        width: 138px;
+        height: 15px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #404040;
+    }
+
+    .container .title .sous-title .line{
+        width: 278px;
+        height: 1px;
+        background-color: #D1CECE;
+        border-radius: 15px;
+        margin-top: 5px;
+    }
+
+    .container .title .sous-title .description{
+        width: 430px;
+        height: 62px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 5px;
+        color: #404040;
+    }
+    .follow-user-n {
+        margin-left: -48px;
+
+        white-space: nowrap;
+    }
+
+</style>
+<body>
+    <div class="header">
+        <img src="/images/icons_html_files/twitch.png">
+        <p>Twitch</p>
+    </div>
+    <div class="search">
+        <center><input type="text" class="input" placeholder="Username" required>
+        <button type="submit" id="searchBTN" style="border: 0; background: transparent; cursor: pointer; margin-left: 10px; margin-top: 40px; position: absolute;">
+            <img src="/images/icons_html_files/search_loop.png" style="width: 24px; height: 24px;">
+        </button></center>
+    </div>
+    <div class="container">
+        <div class="title">
+            <p id="user">Twitch</p>
+            <div class="sous-title">
+                <p id="follow-user" class="follow-user-n">2.3 M followers</p>
+                <div class="line"></div>
+                <div id="desc-user" class="description"><p>Twitch est un service de streaming vidéo en direct et de VAD lancé en juin 2011 et exploité par Twitch Interactive.</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <img id="img-user" src="/images/exemples/twitch.png">
+        <div class="element-on-off">
+            <p id="on-off">Status</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="margin-bottom: 5px;">Made by Maxence R.</p>
+    </div>
+    <script src="/JS/GetUserTwitch.js"></script>
+</body>
+</html>
